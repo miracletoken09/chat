@@ -1432,8 +1432,8 @@
         let validationInterval;
         let currentValidationReward = 0; // Akumulasi sementara (Validasi Running)
         let totalRewardBalance = 0; // Akumulasi permanen (Reward Validasi)
-        let usdtBalance = 1000; // Demo balance untuk withdrawal
-        let bossxBalance = 1000; // Starting balance for demo
+        let usdtBalance = 1000; // ✅ SALDO DIUBAH MENJADI 1000
+        let bossxBalance = 1000; // ✅ SALDO DIUBAH MENJADI 1000
         let stakedAmount = 0; // Jumlah BossX yang di-stake
         // Deposit & Withdrawal variables
         const walletAddresses = {
@@ -2346,6 +2346,7 @@
             setInterval(updateClock, 1000);
             setInterval(checkSixAMStop, 1000);
             updateClock();
+            // ✅ URUTAN INISIALISASI DIPERBAIKI: UPDATE BALANCE DULU, BARU CONTENT LAINNYA
             updateBalanceDisplays();
             updateDepositContent();
             updateWithdrawalContent();
